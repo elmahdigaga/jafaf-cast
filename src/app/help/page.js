@@ -1,0 +1,16 @@
+import Markdown from 'markdown-to-jsx'
+import fs from 'fs'
+import matter from 'gray-matter'
+
+export default function AboutPage() {
+  const helpFile = fs.readFileSync('md/help.md')
+  const help = matter(helpFile)
+
+  return (
+    <div className="mx-4">
+      <div className="prose prose-lg prose-indigo mx-auto mt-6 text-gray-500">
+        <Markdown>{help.content}</Markdown>
+      </div>
+    </div>
+  )
+}
