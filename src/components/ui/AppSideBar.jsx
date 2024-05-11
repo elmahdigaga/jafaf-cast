@@ -2,7 +2,7 @@
 import { Fragment } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import {
-  FolderOpenIcon,
+  HomeIcon,
   XMarkIcon,
   UserIcon,
   Squares2X2Icon,
@@ -10,14 +10,15 @@ import {
   RectangleGroupIcon,
   CreditCardIcon,
   ArrowRightEndOnRectangleIcon,
+  BookOpenIcon,
 } from '@heroicons/react/24/outline'
 import { Logo } from '@/components/ui/Logo'
 import Link from 'next/link'
 import { useParams, usePathname } from 'next/navigation'
 
 const navigation1 = [
-  { name: 'Projects', href: '/app', icon: FolderOpenIcon },
-  { name: 'Subscription', href: '/app/subscription', icon: CreditCardIcon },
+  { name: 'Home', href: '/app', icon: HomeIcon },
+  { name: 'Articles', href: '/app/articles', icon: BookOpenIcon },
   { name: 'Account', href: '/app/account', icon: UserIcon },
 ]
 
@@ -70,7 +71,7 @@ export default function AppSideBar({ isOpen, setIsOpen }) {
   }
 
   function getNavigation() {
-    return !projectId ? navigation1 : constructNavigation2(projectId)
+    return navigation1
   }
 
   return (
