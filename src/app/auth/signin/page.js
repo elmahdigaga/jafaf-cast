@@ -24,18 +24,16 @@ export default function LoginPage() {
 export async function generateMetadata({ params }) {
   return {
     metadataBase: new URL(`${process.env.PUBLIC_SITE_URL}`),
-    title: 'Sign in to access a library of bedtime stories for kids',
-    description:
-      'Sign in to your account and get access to the bedtime stories that you have saved for your kids.',
+    title: 'Title',
+    description: 'Description',
     openGraph: {
       locale: 'en_US',
-      siteName: 'simula.live',
+      siteName: 'jafaf-cast.live',
       images: `/images/hero.png`,
       url: `/auth/signin`,
       type: 'website',
-      title: 'Sign in to access a library of bedtime stories for kids',
-      description:
-        'Sign in to your account and get access to the bedtime stories that you have saved for your kids.',
+      title: 'Tite',
+      description: 'Description',
     },
     alternates: {
       canonical: `/auth/signin`,

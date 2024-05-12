@@ -17,7 +17,7 @@ export async function generateMetadata({ params }) {
     title: 'About',
     description: 'About',
     openGraph: {
-      siteName: 'simula.live',
+      siteName: 'jafaf-cast.live',
       images: `/images/hero.png`,
       url: '/about',
       type: 'article',

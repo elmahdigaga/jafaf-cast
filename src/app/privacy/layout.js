@@ -17,7 +17,7 @@ export async function generateMetadata({ params }) {
     title: 'Privacy',
     description: 'Privacy',
     openGraph: {
-      siteName: 'simula.live',
+      siteName: 'jafaf-cast.live',
       images: `/images/hero.png`,
       url: '/privacy',
       type: 'article',

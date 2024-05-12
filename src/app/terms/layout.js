@@ -17,7 +17,7 @@ export async function generateMetadata({ params }) {
     title: 'Terms of Service',
     description: 'Terms of Service',
     openGraph: {
-      siteName: 'simula.live',
+      siteName: 'jafaf-cast.live',
       images: `/images/hero.png`,
       url: '/terms',
       type: 'article',

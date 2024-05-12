@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://www.simula.live/sitemap.xml
+Sitemap: https://www.jafaf-cast.live/sitemap.xml

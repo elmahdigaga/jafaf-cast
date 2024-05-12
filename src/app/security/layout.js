@@ -17,7 +17,7 @@ export async function generateMetadata({ params }) {
     title: 'Security measures',
     description: 'Security measures',
     openGraph: {
-      siteName: 'simula.live',
+      siteName: 'jafaf-cast.live',
       images: `/images/hero.png`,
       url: '/security',
       type: 'article',

@@ -7,18 +7,16 @@ export default function SignupPage() {
 export async function generateMetadata({ params }) {
   return {
     metadataBase: new URL(`${process.env.PUBLIC_SITE_URL}`),
-    title: 'simula.live - Sign up to access your account ',
-    description:
-      'Register and create a new account and get access to the bedtime stories that you have saved for your kids.',
+    title: 'jafaf-cast.live - Sign up to access your account ',
+    description: '',
     openGraph: {
       locale: 'en_US',
-      siteName: 'simula.live',
+      siteName: 'jafaf-cast.live',
       images: `/images/hero.png`,
       url: `/auth/signup`,
       type: 'website',
-      title: 'simula.live - Sign up to access your account ',
-      description:
-        'Register and create a new account and get access to the bedtime stories that you have saved for your kids.',
+      title: 'jafaf-cast.live - Sign up to access your account ',
+      description: '',
     },
     alternates: {
       canonical: `/auth/signup`,

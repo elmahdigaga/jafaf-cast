@@ -51,7 +51,7 @@ export function Faqs() {
           <p className="mt-2 text-lg text-gray-600">
             If you have anything else you want to ask,{' '}
             <Link
-              href="mailto:support@simula.live"
+              href="mailto:support@jafaf-cast.live"
               className="text-gray-900 underline"
             >
               reach out to us

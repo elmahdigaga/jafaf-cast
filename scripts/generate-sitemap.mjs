@@ -38,7 +38,7 @@ async function generate() {
 
             return `
               <url>
-                  <loc>${`https://www.simula.live${route}`}</loc>
+                  <loc>${`https://www.jafaf-cast.live${route}`}</loc>
               </url>
             `
           })

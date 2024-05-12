@@ -12,12 +12,11 @@ export default function RestorePasswordPage() {
 export async function generateMetadata({ params }) {
   return {
     metadataBase: new URL(`${process.env.PUBLIC_SITE_URL}`),
-    title: 'simula.live - Reset your password',
-    description:
-      'Reset your password and get access to the bedtime stories that you have saved for your kids.',
+    title: 'jafaf-cast.live - Reset your password',
+    description: 'Description',
     openGraph: {
       locale: 'en_US',
-      siteName: 'simula.live',
+      siteName: 'jafaf-cast.live',
       images: `/images/hero.png`,
       url: `/auth/reset-password`,
       type: 'website',
