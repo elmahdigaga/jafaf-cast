@@ -23,15 +23,14 @@ Morocco's agricultural sector heavily relies on predictable weather patterns. Ho
 
 - Node.js installed on your machine
 
-
 ### Installation
 
 1. Clone the repository:
    ```sh
    git clone https://github.com/elmahdigaga/jafaf-cast.git
    ```
-   
 2. Navigate to the project directory:
+
    ```sh
     cd jafaf-cast
    ```
@@ -41,30 +40,30 @@ Morocco's agricultural sector heavily relies on predictable weather patterns. Ho
     npm install
    ```
 
-
 ### Environment Variables
 
-1. Create a new file named **.env** in the root directory of the project.
+1. Create a new file named **.env.local** in the root directory of the project, by running this command:
 
-2. Copy the contents of **.env.example** into **.env**.
+   ```sh
+    cp .env.example .env.local
+   ```
 
-3. Fill in the required variables in the **.env** file.
-
+Edit the .env.local file to include your own credentials, You must have your own supabase account where you will define these tables:
+![Schema](https://github.com/elmahdigaga/jafaf-cast/blob/main/assets/schema.png?raw=true)
 
 ### Running the Application
 
 1. Start the development server:
+
    ```sh
    npm run dev
    ```
 
 2. Open your browser and navigate to [http://localhost:3000](http://localhost:3000) to access JafafCast
 
-
 ### Contributing
 
 Contributions are welcome! If you have any suggestions, bug fixes, or feature requests, please open an issue or submit a pull request.
-
 
 ### Links
 
