@@ -17,7 +17,10 @@ export default function Statistics({ data }) {
   return (
     <div className="mt-4 space-y-4">
       <h1 className="text-xl font-bold text-gray-800">Statistics</h1>
+      <h4>Temperature</h4>
       <Chart dataSource={tmp} properties={["day", "temp"]} />
+
+      <h4>Humidity</h4>
       <Chart dataSource={humidity} properties={["day", "humidity"]} />
     </div>
   )
