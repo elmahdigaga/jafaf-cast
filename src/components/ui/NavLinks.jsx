@@ -7,8 +7,6 @@ import { AnimatePresence, motion } from 'framer-motion'
 const headerLinks = [
   ['Features', '/#features'],
   ['FAQs', '/#faqs'],
-  // ['Blog', '/blog'],
-  // ['About', '/about'],
   ['Contact Us', '/contact'],
 ]
 

@@ -15,15 +15,15 @@ export function CallToAction() {
       <Container className="relative">
         <div className="mx-auto max-w-md sm:text-center">
           <h2 className="text-3xl font-medium tracking-tight text-white sm:text-4xl">
-            Join Simula Today
+            Try JafafCast today
           </h2>
           <p className="mt-4 text-lg text-gray-200">
-            Sign up in just 3 seconds! Join Simula Today to effortlessly
-            generate mock data for free, and unlock even more features.
+            Sign up in just 3 seconds! Join JafafCast Today and leverage
+            cutting-edge technology to predict droughts across Morocco. It
+            delivers accurate forecasts for every region and city, one month in
+            advance. JafafCast goes beyond just predictions by providing daily
+            articles linked to the forecasts.
           </p>
-          {/*<div className="mt-8 flex justify-center">
-            <AppStoreLink color="white" />
-          </div>*/}
         </div>
       </Container>
     </section>

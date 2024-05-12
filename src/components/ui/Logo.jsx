@@ -13,7 +13,7 @@ export function Logo(props) {
     <div className="flex items-center">
       <Logomark width="30" className="inline-block fill-primary" />
       <span className="ml-2 font-mono text-lg font-bold text-indigo-500">
-        Simula
+        JafafCast
       </span>
     </div>
   )

@@ -6,33 +6,30 @@ import { Container } from '@/components/ui/Container'
 
 const faqs = [
   {
-    question: 'How do I create a new project on the platform?',
+    question: 'How does JalalCast predict droughts in Morocco?',
     answer:
-      'To create a new project, simply navigate to the dashboard and click on the "Create Project" button. Follow the prompts to fill in project details and customize as needed.',
+      'JalalCast utilizes advanced machine learning algorithms trained on historical climate data to predict drought likelihood in Morocco. These predictions provide insights into future drought conditions, enabling proactive measures to mitigate their impact.',
   },
   {
-    question: 'Can I customize the mock data generated for my project?',
+    question: 'What data sources are used for drought prediction?',
     answer:
-      'Yes, you can customize the mock data generated to simulate different scenarios and test various functionalities of your project. Our platform provides tools to tailor the mock data according to your requirements.',
+      'JalalCast aggregates and analyzes data from various sources, including satellite imagery, meteorological observations, and hydrological measurements. This multi-source approach ensures comprehensive and accurate drought predictions.',
   },
   {
-    question:
-      'What happens if I encounter technical issues while using the platform?',
+    question: 'How accurate are the drought predictions?',
     answer:
-      'If you encounter any technical issues, you can reach out to our support team for assistance. We have dedicated support staff available to help resolve any issues and ensure smooth operation of the platform.',
-  },
-
-  {
-    question:
-      'How often are new features and updates rolled out on the platform?',
-    answer:
-      'We strive to continuously improve our platform by rolling out new features and updates regularly. Updates are typically released based on user feedback and industry trends to enhance the user experience and functionality of the platform.',
+      'JalalCast achieves high accuracy in drought predictions through continuous refinement of its machine learning models and validation against ground-truth data. Our platform provides reliable forecasts with minimal margin of error.',
   },
   {
     question:
-      'Is there a limit to the number of projects I can create on the platform?',
+      'How can I access the daily articles and discussions on JalalCast?',
     answer:
-      'No, there is no limit to the number of projects you can create. You can create as many projects as you need to fulfill your development goals.',
+      "To access daily articles and discussions, simply navigate to the platform's dashboard after logging in. From there, you can explore articles related to the latest predictions and engage in discussions with other users.",
+  },
+  {
+    question: 'Is my data secure on JalalCast?',
+    answer:
+      'Yes, JalalCast prioritizes the security and privacy of user data. We utilize state-of-the-art encryption techniques to protect user information and adhere to strict security protocols. Additionally, blockchain technology ensures the integrity and transparency of stored climate data.',
   },
 ]
 

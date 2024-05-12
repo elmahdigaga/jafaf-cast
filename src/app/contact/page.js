@@ -8,12 +8,8 @@ export default function ContactPage() {
         <div className="w-full">
           <h1 className="text-lg font-bold text-black">Contact Us</h1>
           <p>
-            We value your feedback and are always looking for ways to improve{' '}
-            <Link className="text-primary" href="https://www.simula.live/">
-              simula.live
-            </Link>
-            . If you have any suggestions or ideas to share, please fill this
-            form
+            We value your feedback and are always looking for ways to improve.
+            If you have any suggestions or ideas to share, please fill this form
           </p>
         </div>
         <ContactForm />

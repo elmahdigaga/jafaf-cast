@@ -1,7 +1,5 @@
 'use client'
 
-import Image from 'next/image'
-import Link from 'next/link'
 import { Container } from '@/components/ui/Container'
 import { Logomark } from '@/components/ui/Logo'
 import { NavLinks } from '@/components/ui/NavLinks'
@@ -15,19 +13,17 @@ export function Footer() {
             <div className="flex items-center text-gray-900">
               <Logomark className="h-10 w-10 flex-none fill-primary" />
               <div className="ml-4">
-                <p className="text-base font-semibold">Simula</p>
+                <p className="text-base font-semibold">JafafCast</p>
                 <p className="mt-1 text-sm">
-                  Simula offers developers a versatile toolkit for effortlessly
-                  generating mock data, ensuring seamless frontend testing and
-                  rapid prototyping. With support for multiple response formats
-                  including JSON, GraphQL, XML, and YAML, users can tailor their
-                  data to suit their specific project needs with ease.
+                  JafafCast presents a novel approach to drought prediction in
+                  Morocco, aiming to empower stakeholders with data-driven
+                  insights to navigate the challenges posed by recurring
+                  droughts. Its potential benefits for Morocco's agricultural
+                  sector, water resource management, and overall economic
+                  stability are undeniable.
                 </p>
               </div>
             </div>
-            <nav className="mt-11 flex gap-8">
-              <NavLinks isFooter={true} />
-            </nav>
           </div>
         </div>
         <div className="flex flex-col items-center border-t border-gray-200 pb-12 pt-8 md:flex-row-reverse md:justify-between md:pt-6">

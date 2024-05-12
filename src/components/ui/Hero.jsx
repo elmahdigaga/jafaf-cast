@@ -21,34 +21,25 @@ export function Hero() {
         <div className="flex items-center justify-center py-24">
           <div className="z-10 flex flex-col items-center justify-center lg:max-w-[800px]">
             <h1 className="text-4xl font-extrabold tracking-tight text-gray-900">
-              Simula: Redefining Data Elegance.
+              JafafCast: Drought Prediction Platform
             </h1>
             <p className="my-8 text-center text-lg text-gray-600">
-              Elevating Development with Simula: Effortlessly craft robust
-              frontend tests with our innovative mock data generation.
-              Seamlessly streamline your workflow and elevate your testing
-              experience today.
+              JafafCast: is a comprehensive platform that integrates Artificial
+              Intelligence (AI), Blockchain, and Cybersecurity to provide
+              accurate drought predictions for every region and city in Morocco.
+              JafafCast not only forecasts the likelihood of droughts one month
+              in advance but also offers daily articles associated with the
+              predictions, fostering discussion and collaboration among users.
             </p>
 
             <Button href="/app">
-              <span>Get started, for free</span>
+              <span>Explore!</span>
               <ArrowLongRightIcon className="h-4 w-4 text-white" />
             </Button>
           </div>
           <div className="relative my-20 mt-10 lg:col-span-5 lg:row-span-2 lg:mt-0 xl:col-span-6"></div>
         </div>
       </Container>
-
-      <div className="mt-8 flex flex-col items-center justify-center space-y-4">
-        <p className="text-sm text-gray-500">
-          Receive responses in various formats
-        </p>
-        <div className="flex items-center justify-center space-x-6">
-          {images.map((img, index) => (
-            <img width={50} height={50} key={index} src={img} />
-          ))}
-        </div>
-      </div>
     </div>
   )
 }
