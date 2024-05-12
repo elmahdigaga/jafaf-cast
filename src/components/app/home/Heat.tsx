@@ -22,7 +22,7 @@ export default function HeatMap(props) {
   useEffect(() => {
     if (map.current === undefined || !tileImagery) { return }
     // map.current.zoomToGeographic({ left: -134.5, top: 16.0, width: 70.0, height: 37.0 });
-    map.current.zoomToGeographic({ left: -18, top: 22, width: 16.0, height: 15.0 })
+    map.current.zoomToGeographic({ left: -12, top: 22, width: 20.0, height: 20.0 })
 
     onDataLoaded(props.data)
   }, [tileImagery])
@@ -76,7 +76,25 @@ export default function HeatMap(props) {
   }
 
   return (
-    <div className='overflow-hidden rounded-lg shadow'>
+    <div className='overflow-hidden rounded-lg shadow relative'>
+      <div className='absolute z-40 top-0 left-0 bg-white/40 flex flex-col space-y-2 p-1'>
+        <div className='flex items-center text-xs space-x-2'>
+          <div className='w-6 h-4 bg-purple-500'></div>
+          <span>Very High</span>
+        </div>
+        <div className='flex items-center text-xs space-x-2'>
+          <div className='w-6 h-4 bg-red-500'></div>
+          <span>High</span>
+        </div>
+        <div className='flex items-center text-xs space-x-2'>
+          <div className='w-6 h-4 bg-teal-500'></div>
+          <span>Low</span>
+        </div>
+        <div className='flex items-center text-xs space-x-2'>
+          <div className='w-6 h-4 bg-green-500'></div>
+          <span>Very Low</span>
+        </div>
+      </div>
       <IgrGeographicMap
         ref={map}
         width="900px"

@@ -24,7 +24,7 @@ export default async function Page() {
     fileContents = fs.readFileSync(folder, "utf8");
     heat = await getLatestPrediction();
   } catch (e) {
-    return <DissmissibleErrorAlert message={e} />
+    return <DissmissibleErrorAlert message={e.toString()} />
   }
 
   return (
