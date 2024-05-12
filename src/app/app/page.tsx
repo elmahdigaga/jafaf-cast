@@ -1,4 +1,3 @@
-import fs from "fs";
 import Information from '@/components/app/home/Information'
 import Map from '@/components/app/home/map'
 import Wrapper from '@/components/app/wrapper'
@@ -16,13 +15,19 @@ async function getLatestPrediction(): Promise<any> {
   return data.content
 }
 
+async function readWeatherData() {
+  const response = await fetch("https://ssrpicafsjnghriiuigm.supabase.co/storage/v1/object/public/data/weather-data.json")
+  const data = await response.json();
+  return data
+}
+
 export default async function Page() {
-  var fileContents = null;
+  var weatherData = null;
   var heat = null;
   try {
-    const folder = "src/data/weather-data.json";
-    fileContents = fs.readFileSync(folder, "utf8");
+    weatherData = await readWeatherData();
     heat = await getLatestPrediction();
+    console.log(weatherData)
   } catch (e) {
     return <DissmissibleErrorAlert message={e.toString()} />
   }
@@ -30,11 +35,11 @@ export default async function Page() {
   return (
     <Wrapper>
       <div className='w-full flex justify-between'>
-        <Information data={JSON.parse(fileContents)} />
+        <Information data={weatherData} />
         <Map data={heat} />
       </div>
 
-      <Statistics data={JSON.parse(fileContents)} />
+      <Statistics data={weatherData} />
     </Wrapper>
   )
 }
