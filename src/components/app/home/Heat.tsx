@@ -36,11 +36,12 @@ export default function HeatMap(props) {
     const longitudes: number[] = [];
     const populations: number[] = [];
 
+    const classes = [10000000, 100000, 100000, 10, 1, 0, -1, 0, 0]
     // parsing CSV data and creating geographic locations
     for (let i = 1; i < data.length; i++) {
       latitudes.push(Number(data[i].Latitude));
       longitudes.push(Number(data[i].Longitude));
-      populations.push(1);
+      populations.push(classes[data[i].spi_class]);
     }
 
     // generating heat map imagery tiles
@@ -80,7 +81,7 @@ export default function HeatMap(props) {
         ref={map}
         width="900px"
         height="500px"
-        zoomable={false} />
+        zoomable={true} />
     </div>
   );
 }

@@ -7,27 +7,40 @@ import { cookies } from 'next/headers'
 import { objectToCamel } from 'ts-case-convert'
 import { DissmissibleErrorAlert } from '@/components/ui/DissmissibleAlert'
 import { formatDate } from '@/utils/format-date'
+import Comments from '@/components/app/articles/Comments'
 
-async function getArticle(articleId: string): Promise<Article> {
+
+async function getArticle(articleId: string): Promise<{ article: any, comments: any[] }> {
   const supabase = createServerComponentClient({ cookies })
   const {
     data,
     error,
-  } = await supabase.from("articles").select("id, image, content, title, created_at").eq("id", articleId).single()
+  } = await supabase.from("articles").select("id, image, content, title, created_at, comments(content, profiles(first_name))").eq("id", articleId).single()
 
-  if (error) throw "Could not fetch user from the server!"
+  if (error) {
+    console.log(error)
+    throw "Could not fetch user from the server!"
+  }
 
-  return (objectToCamel(data) as unknown) as Article;
+  const article = objectToCamel(data)
+  const comments = article.comments
+  delete article.comments;
+
+  return { article, comments } as { article: any, comments: any[] }
 }
 
 
 async function PostPage({ params }) {
   const articleId: string = params.articleId
-  var article: Article
+  var article: any
+  var comments: any
 
   try {
-    article = await getArticle(articleId)
+    const response = await getArticle(articleId)
+    article = response.article
+    comments = response.comments
   } catch (e) {
+    console.log(e)
     return <DissmissibleErrorAlert message={e.toString()} />
   }
 
@@ -173,6 +186,8 @@ async function PostPage({ params }) {
         <div className="prose prose-lg prose-indigo mx-auto mt-6 text-gray-500">
           <Markdown>{article.content}</Markdown>
         </div>
+
+        <Comments reportId={articleId} comments={comments} />
       </div>
     </div>
   )
