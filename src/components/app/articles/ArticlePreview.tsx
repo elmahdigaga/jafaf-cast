@@ -5,7 +5,7 @@ import { formatDate } from "@/utils/format-date";
 export default function ArticlePreview({ article }: { article: Article }) {
   return (
     <div className="flex flex-col overflow-hidden rounded-lg shadow-lg">
-      <Link href={`/app/articles/${article.id}`}>
+      <Link href={`/app/reports/${article.id}`}>
         <div className="flex-shrink-0">
           <img className="h-48 w-full object-cover" src={article.image} alt="" />
         </div>

@@ -18,7 +18,7 @@ import { useParams, usePathname } from 'next/navigation'
 
 const navigation1 = [
   { name: 'Home', href: '/app', icon: HomeIcon },
-  { name: 'Articles', href: '/app/articles', icon: BookOpenIcon },
+  { name: 'Reports', href: '/app/reports', icon: BookOpenIcon },
   { name: 'Account', href: '/app/account', icon: UserIcon },
 ]
 

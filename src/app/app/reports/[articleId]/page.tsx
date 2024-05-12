@@ -7,13 +7,15 @@ import { cookies } from 'next/headers'
 import { objectToCamel } from 'ts-case-convert'
 import { DissmissibleErrorAlert } from '@/components/ui/DissmissibleAlert'
 import { formatDate } from '@/utils/format-date'
+import Comments from '@/components/app/articles/Comments'
+
 
 async function getArticle(articleId: string): Promise<Article> {
   const supabase = createServerComponentClient({ cookies })
   const {
     data,
     error,
-  } = await supabase.from("articles").select("id, image, content, title, created_at").eq("id", articleId).single()
+  } = await supabase.from("articles").select("id, image, content, title, created_at, comments(content, profile(first_name))").eq("id", articleId).single()
 
   if (error) throw "Could not fetch user from the server!"
 
@@ -173,6 +175,8 @@ async function PostPage({ params }) {
         <div className="prose prose-lg prose-indigo mx-auto mt-6 text-gray-500">
           <Markdown>{article.content}</Markdown>
         </div>
+
+        <Comments />
       </div>
     </div>
   )
